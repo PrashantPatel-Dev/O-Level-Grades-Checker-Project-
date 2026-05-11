@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O level grades checker</title>
+  <style>
+  *{
+    margin:0px; padding: 0px;
+    
+  }
+  body{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   height:100vh;
+    
+  }
+  form{
+   border: 2px solid #3E4BD9;
+   height:200px;
+   padding: 50px;
+   background-color:#24D1CED9;
+   font-weight: 500;
+  }
+  button {
+   margin-left: 25vw;
+   font-size: 20px;
+   color:#56058BD9;
+   border :2px solid #2467D1D9;
+   margin-top: 2vh;
+   width:200px;
+   font-weight: 700;
+   background-color: #79E21FE8;
+  }
+ 
+  </style>
+</head>
+<body>
+  <form>
+   Enter your name&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="01"><br><br>
+   Enter your practical num. &nbsp;:&nbsp;&nbsp; <input type="text" id="02"><br><br>
+   Enter your theory num. &nbsp;: &nbsp;&nbsp;&nbsp;<input type="text" id="03"><br><br> 
+   <button type="button" id="result" onclick="namaste()">Result
+    </button><br><br>
+   <h4 id="04"></h4>
+  </form>
+<script>
+function namaste(){
+let first = document.getElementById("01").value;
+let prac = parseFloat(document.getElementById("02").value);
+let theo = parseFloat(document.getElementById("03").value);
+let pracnum = (prac * 40)/100;
+let theonum = (theo * 60)/100;
+let sum = pracnum + theonum;
+if (sum > 100) {
+  document.getElementById("04").innerHTML = "Enter  num 1 to 100 mr. " + first+"❤️";
+}
+else if (sum >= 84) {
+  document.getElementById("04").innerHTML = " Congratulation S Grade mr. " + first+"❤️";
+  document.getElementById("04").style="color:darkorange; font-size:22px;"
+}
+else if (sum >= 74) {
+  document.getElementById("04").innerHTML = "Congratulation A Grade mr. " + first+"❤️";
+  document.getElementById("04").style="color:greenyellow; font-size:21px;"
+}
+else if (sum >= 64) {
+  document.getElementById("04").innerHTML = "Congratulation B Grade mr. " + first+"❤️";
+  document.getElementById("04").style="color:deeppink; font-size:22px;"
+}
+else if (sum >= 54) {
+  document.getElementById("04").innerHTML = "Congratulation C Grade mr. " + first+"❤️";
+  document.getElementById("04").style="color:blue; font-size:20px;"
+}
+else if (sum >= 50) {
+  document.getElementById("04").innerHTML = "Congratulation D Grade mr.  "+ first+"❤️";
+  document.getElementById("04").style="color:tomato; font-size:21px;"
+}
+else if (sum<=47 || sum >= 1) {
+  document.getElementById("04").innerHTML = "बधाई हो आप फेल हो गऐ ❤️ mr. " + first;
+  document.getElementById("04").style="color:red;font-size:20px;"
+}
+    else {
+    document.getElementById("04").innerHTML = "Enter name and number.";
+   document.getElementById("04"
+   ).style="color:red; font-size   :20px" 
+   ;
+  }
+}
+</script>
+</body>
+</html>
